@@ -1,0 +1,20 @@
+{
+  "name": "It's Been Awhile",
+  "version": "1.0",
+  "description": "Enjoy the melodic tones of Staind whenever these magical words appear.",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts":
+  [
+    {
+      "matches": ["*://*/*"],
+      "js": ["awhile.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "*.mp3"
+]
+}
