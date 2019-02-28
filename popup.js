@@ -12,25 +12,6 @@ chrome.storage.local.get(["extStatus"], function(items){
   }
 })
 
-//function setOff() {
-//  if (isEnabled == true) {
-//    
-//    chrome.browserAction.setIcon({ path: {'128': 'icon.png'} })
-//    document.querySelector('img').setAttribute('src','icon.png')
-//    chrome.extension.getBackgroundPage().chrome.tabs.executeScript(null,{"code" : "markItUp()"})
-//  } 
-//  
-//  else if (isEnabled == false) {
-//    chrome.browserAction.setIcon({ path: {'128': 'icon-gray.png'} })
-//    document.querySelector('img').setAttribute('src','icon-gray.png')
-//    chrome.extension.getBackgroundPage().chrome.tabs.executeScript(null,{"code" : "markItDown()"})
-//  } 
-////  else if (isEnabled == undefined) {
-////    document.querySelector('img').setAttribute('src','icon-gray.png')
-////    chrome.extension.getBackgroundPage().chrome.tabs.executeScript(null,{"code" : "markItUp()"})
-////  }
-//}
-
 document.querySelector('img').addEventListener('click', toggle)
 
 function toggle() {
