@@ -3,6 +3,15 @@
   "version": "1.0",
   "description": "Enjoy the melodic tones of Staind whenever these magical words appear.",
   "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [ 
+    "management",
+    "tabs",
+    "storage",
+    "<all_urls>"
+  ],
   "icons": {
     "128": "icon.png"
   },
@@ -14,7 +23,11 @@
       "run_at": "document_end"
     }
   ],
+  "background": {
+    "scripts": ["awhile.js"]
+    //,"persistent": true
+  },
   "web_accessible_resources": [
     "*.mp3"
-]
+  ]
 }
